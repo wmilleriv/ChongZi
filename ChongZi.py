@@ -8,7 +8,8 @@ soup=BeautifulSoup(r.content,'html.parser')
 print(soup.prettify())
 
 s=soup.find('div', class_='list_right_nr1')
-content=s.find_all('a')
-print(content)
+for link in s.find_all('a'):
+    print(link.get('href'))
+
 
 
